@@ -73,7 +73,7 @@ For developers who want to run this locally, audit the source code, or deploy it
 ### Edge Deployment
 To publish this MCP to the Vinkius Edge network, use the integrated deployment command:
 ```bash
-npm run deploy
+npx mcpfusion deploy
 ```
 
 ## Security & Architecture
