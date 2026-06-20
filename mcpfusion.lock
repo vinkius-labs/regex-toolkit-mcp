@@ -1,0 +1,116 @@
+{
+  "capabilities": {
+    "tools": {
+      "extract_pattern": {
+        "behavior": {
+          "affordanceTopology": [],
+          "cognitiveGuardrails": {
+            "agentLimitMax": null,
+            "egressMaxBytes": null
+          },
+          "destructiveActions": [],
+          "egressSchemaDigest": null,
+          "middlewareChain": [],
+          "readOnlyActions": [],
+          "systemRulesFingerprint": "static:a2eb28ec01e33fbd32c934e596e0780119e60f24826718d3b1abbddfeb7e92e1"
+        },
+        "entitlements": {
+          "codeEvaluation": false,
+          "crypto": false,
+          "filesystem": false,
+          "network": false,
+          "subprocess": false
+        },
+        "integrityDigest": "sha256:1d83cc3add727ec4789071f38d714e874e1d582505ca421951b9602ce81b4da5",
+        "surface": {
+          "actions": [
+            "default"
+          ],
+          "description": "[INSTRUCTIONS] Use this tool to harvest specific PII or links from raw text blocks.\n\nExtracts all unique emails, URLs, or phone numbers from a large body of text.. Select operation via the `action` parameter. Actions: default\n\nWorkflow:\n- 'default': [INSTRUCTIONS] Use this tool to harvest specific PII or links from raw text blocks.\n\nExtracts all unique emails, URLs, or phone numbers from a large body of text.. Requires: text, type",
+          "inputSchemaDigest": "sha256:9c80d6e7c0b7fe1f1f6732983987528c728469e299ff8241e1784d08218fcdca",
+          "tags": []
+        },
+        "tokenEconomics": {
+          "inflationRisk": "low",
+          "schemaFieldCount": 0,
+          "unboundedCollection": false
+        }
+      },
+      "mask_sensitive_data": {
+        "behavior": {
+          "affordanceTopology": [],
+          "cognitiveGuardrails": {
+            "agentLimitMax": null,
+            "egressMaxBytes": null
+          },
+          "destructiveActions": [],
+          "egressSchemaDigest": null,
+          "middlewareChain": [],
+          "readOnlyActions": [],
+          "systemRulesFingerprint": "static:a2eb28ec01e33fbd32c934e596e0780119e60f24826718d3b1abbddfeb7e92e1"
+        },
+        "entitlements": {
+          "codeEvaluation": false,
+          "crypto": false,
+          "filesystem": false,
+          "network": false,
+          "subprocess": false
+        },
+        "integrityDigest": "sha256:2e4371e934506b9e649df04d4edbdb05ae4324cbbc5198f8762108a8921d797e",
+        "surface": {
+          "actions": [
+            "default"
+          ],
+          "description": "[INSTRUCTIONS] Use this before sending sensitive user content to external systems.\n\nRedacts sensitive PII (emails, phones, URLs) from a text blob by replacing them with [REDACTED] tags.. Select operation via the `action` parameter. Actions: default\n\nWorkflow:\n- 'default': [INSTRUCTIONS] Use this before sending sensitive user content to external systems.\n\nRedacts sensitive PII (emails, phones, URLs) from a text blob by replacing them with [REDACTED] tags.. Requires: text, maskEmails, maskUrls, maskPhones",
+          "inputSchemaDigest": "sha256:d6587dfb9a9733966fcef24c98925899f00771fecce437cdb1c39632db48702a",
+          "tags": []
+        },
+        "tokenEconomics": {
+          "inflationRisk": "low",
+          "schemaFieldCount": 0,
+          "unboundedCollection": false
+        }
+      },
+      "validate_pattern": {
+        "behavior": {
+          "affordanceTopology": [],
+          "cognitiveGuardrails": {
+            "agentLimitMax": null,
+            "egressMaxBytes": null
+          },
+          "destructiveActions": [],
+          "egressSchemaDigest": null,
+          "middlewareChain": [],
+          "readOnlyActions": [],
+          "systemRulesFingerprint": "static:a2eb28ec01e33fbd32c934e596e0780119e60f24826718d3b1abbddfeb7e92e1"
+        },
+        "entitlements": {
+          "codeEvaluation": false,
+          "crypto": false,
+          "filesystem": false,
+          "network": false,
+          "subprocess": false
+        },
+        "integrityDigest": "sha256:fdfd0eacf8103be481c8071a92cbbc4b7de91c286f71d82932b0f8d2250e8fb2",
+        "surface": {
+          "actions": [
+            "default"
+          ],
+          "description": "[INSTRUCTIONS] Returns true if the string is a valid format, false otherwise.\n\nValidates if a single string perfectly matches an email, URL, or phone format.. Select operation via the `action` parameter. Actions: default\n\nWorkflow:\n- 'default': [INSTRUCTIONS] Returns true if the string is a valid format, false otherwise.\n\nValidates if a single string perfectly matches an email, URL, or phone format.. Requires: text, type",
+          "inputSchemaDigest": "sha256:627876e502be22ad4eca4cfb13ec6bb52f8b9f835b7addc0bc992a450430ef4b",
+          "tags": []
+        },
+        "tokenEconomics": {
+          "inflationRisk": "low",
+          "schemaFieldCount": 0,
+          "unboundedCollection": false
+        }
+      }
+    }
+  },
+  "generatedAt": "2026-06-20T06:01:16.610Z",
+  "integrityDigest": "sha256:ae9369c0b90faf6e27333251629d5441374f144dd4b206c5095838969fc2569d",
+  "lockfileVersion": 1,
+  "mcpfusionVersion": "4.3.0",
+  "serverName": "mcpfusion-server"
+}
