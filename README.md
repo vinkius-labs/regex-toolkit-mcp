@@ -2,7 +2,8 @@
 
 A specialized, high-performance Model Context Protocol (MCP) server engineered to handle complex Regular Expression operations deterministically. This server equips your LLM agents with the ability to securely extract, validate, and mask Personally Identifiable Information (PII) without relying on token-heavy, hallucination-prone AI pattern matching.
 
-[![Available on Vinkius Cloud](https://img.shields.io/badge/Run%20on-Vinkius%20Cloud-blue?style=for-the-badge)](https://vinkius.com/mcp/regex-toolkit)
+[![Available on Vinkius Edge](https://img.shields.io/badge/Run%20on-Vinkius%20Edge-blue?style=for-the-badge)](https://vinkius.com/mcp/regex-toolkit)
+[![Docker Pulls](https://img.shields.io/docker/pulls/vinkius/regex-toolkit-mcp?style=for-the-badge&logo=docker&color=2496ed)](https://hub.docker.com/r/vinkius/regex-toolkit-mcp)
 [![Built with MCP Fusion](https://img.shields.io/badge/Powered%20By-MCP%20Fusion-success?style=for-the-badge)](https://www.npmjs.com/package/@mcpfusion/core)
 
 ## The LLM Pattern Matching Dilemma
@@ -37,43 +38,28 @@ This server exposes three distinct, highly optimized tools for your AI workflows
 
 ---
 
-## Deploy & Run via Vinkius Cloud
+## Run on Vinkius Edge (Free Edge Hosting)
 
-You don't need to host or manage this infrastructure. For production workloads requiring high availability and low latency, you can attach this MCP directly to your agents via **Vinkius Cloud**.
+Vinkius provides **free, highly available edge hosting** using secure V8 isolates. Deploying to the Vinkius Edge is the fastest way to make this MCP server accessible to any AI agent anywhere, with sub-millisecond response times and zero maintenance.
 
-👉 **[Get Instant Access to Regex Toolkit MCP on Vinkius](https://vinkius.com/mcp/regex-toolkit)**
+1. Clone this repository
+2. Run the deployment command:
 
-Vinkius Cloud is a specialized edge platform for running MCP servers. Our infrastructure executes your tools in secure, isolated V8 sandboxes globally, providing native DDoS protection, automatic scaling, and instant tool availability.
-
----
-
-## Local Installation & Source Code
-
-For developers who want to run this locally, audit the source code, or deploy it into their own VPCs, this project is entirely open-source. It is constructed using [MCP Fusion](https://www.npmjs.com/package/@mcpfusion/core), ensuring strict type safety and architectural separation of concerns.
-
-### Setup Instructions
-
-1. **Install Dependencies**
-   Ensure you have Node.js v20+ installed, then run:
-   ```bash
-   npm install
-   ```
-
-2. **Build the TypeScript Source**
-   ```bash
-   npm run build
-   ```
-
-3. **Start the MCP Server**
-   ```bash
-   npm run dev
-   ```
-   *The server communicates via standard input/output (stdio), ready to be consumed by any compliant MCP client.*
-
-### Edge Deployment
-To publish this MCP to the Vinkius Edge network, use the integrated deployment command:
 ```bash
 npx mcpfusion deploy
+```
+
+That's it. Your MCP server is now live, secure, and ready to be connected to your agents.
+
+👉 **[Access the Regex Toolkit MCP on Vinkius](https://vinkius.com/mcp/regex-toolkit)**
+
+## Local Development
+
+Constructed using [MCP Fusion](https://www.npmjs.com/package/@mcpfusion/core) for reliable, strictly typed execution.
+
+```bash
+npm install
+npm run dev
 ```
 
 ## Security & Architecture
